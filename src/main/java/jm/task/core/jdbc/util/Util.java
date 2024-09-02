@@ -11,7 +11,7 @@ public class Util {
     private static final String URL_KEY = "db.url";
 
     private Util(){}
-    // JDBC
+
     public static Connection connect(){
         try {
             return DriverManager.getConnection(
