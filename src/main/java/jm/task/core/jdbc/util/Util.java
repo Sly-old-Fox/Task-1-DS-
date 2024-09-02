@@ -12,14 +12,10 @@ public class Util {
 
     private Util(){}
 
-    public static Connection connect(){
-        try {
-            return DriverManager.getConnection(
-                    PropertiesUtil.get(URL_KEY),
-                    PropertiesUtil.get(USERNAME_KEY),
-                    PropertiesUtil.get(PASSWORD_KEY));
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+    public static Connection connect() throws SQLException {
+        return DriverManager.getConnection(
+                PropertiesUtil.get(URL_KEY),
+                PropertiesUtil.get(USERNAME_KEY),
+                PropertiesUtil.get(PASSWORD_KEY));
     }
 }
